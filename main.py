@@ -5,11 +5,16 @@ import matplotlib.pyplot as plot
 def naca():
 
     """Entrée utilisateur""" # Question 1
+
     flag_regles=input("Le code qui suit trace le profil d'une aile de type NACA00XX et retourne son épaisseur maximale"
                       " et la position de celle ci \n(pressez une touche pour continuer) ")
+
     num_naca = input("\n\nEntrez le numéro du profil NACA à 4 chiffres sous la forme 00XX : ")
+
     c = float(input("Entrez la corde du profil en metres : "))
+
     points = int(input("Entrez le nombre de points désirés pour le graphique : "))
+
     distribution = input("Selon quel type de distribution des points faut il tracer le graphique ? "
                          "(lineaire (l) / non uniforme (nu)) : ")
     t = int(num_naca[2:]) / 100
@@ -36,7 +41,7 @@ def naca():
     plot.plot(x_up, y_up, label="Extrados", color='r')
     plot.plot(x_down, y_down, label="Intrados", color='b')
     plot.xlabel("Position le long de la corde [m]")
-    plot.ylabel("Épaisseur [m]")
+    plot.ylabel("Epaisseur [m]")
     plot.title(f"Profil NACA {num_naca}")
     plot.legend()
     plot.grid()
